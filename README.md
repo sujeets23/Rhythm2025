@@ -1,6 +1,9 @@
-# Welcome to your Lovable project
+# Rythm 2025 — Karma • Dharma
 
-## Project info
+**Inter PUC Fest** celebrating talent, tradition, and purpose  
+November 4-5, 2025 | Sanskriti Auditorium, Jaipur
+
+## Project Info
 
 **URL**: https://lovable.dev/projects/817deae5-ff08-42c1-8836-08cd7794d559
 

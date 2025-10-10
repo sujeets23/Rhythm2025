@@ -1,0 +1,330 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Calendar, MapPin, Clock, Trophy, Users, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
+import { EventCard } from "@/components/EventCard";
+import { eventsData } from "@/lib/eventsData";
+import heroBg from "@/assets/hero-bg.jpg";
+
+export default function Home() {
+  const floatingParticles = Array.from({ length: 8 }, (_, i) => i);
+
+  return (
+    <>
+      <SEO 
+        title="Rythm 2025 — Karma • Dharma" 
+        description="Inter PUC Fest celebrating talent, tradition, and purpose • Nov 4-5, 2025 at Sanskriti Auditorium, Aryavarta College, Jaipur"
+        path="/"
+      />
+
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background with parallax */}
+        <motion.div 
+          className="absolute inset-0 z-0"
+          style={{ 
+            backgroundImage: `linear-gradient(rgba(107, 17, 47, 0.7), rgba(107, 17, 47, 0.5)), url(${heroBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
+
+        {/* Floating particles */}
+        {floatingParticles.map((i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-accent rounded-full opacity-60"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              x: [0, Math.random() * 20 - 10, 0],
+              opacity: [0.3, 0.8, 0.3],
+            }}
+            transition={{
+              duration: 6 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
+
+        {/* Hero Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-6 max-w-4xl mx-auto"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="inline-block"
+            >
+              <span className="text-accent font-serif text-lg md:text-xl">॥</span>
+              <span className="mx-3 text-accent text-sm md:text-base tracking-widest">NOVEMBER 4-5, 2025</span>
+              <span className="text-accent font-serif text-lg md:text-xl">॥</span>
+            </motion.div>
+
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-background drop-shadow-2xl">
+              Rythm 2025
+            </h1>
+            
+            <p className="font-serif text-2xl md:text-3xl text-accent drop-shadow-lg">
+              Karma • Dharma
+            </p>
+
+            <p className="text-lg md:text-xl text-background/90 max-w-2xl mx-auto">
+              Inter PUC Fest celebrating talent, tradition, and purpose
+            </p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="flex flex-wrap gap-4 justify-center pt-4"
+            >
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow font-semibold"
+              >
+                <Link to="/register">Register Now</Link>
+              </Button>
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-background text-background hover:bg-background hover:text-primary"
+              >
+                <Link to="/events">View Events</Link>
+              </Button>
+              <Button 
+                asChild 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-background text-background hover:bg-background hover:text-primary"
+              >
+                <Link to="/schedule">See Schedule</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="w-6 h-10 border-2 border-background rounded-full flex items-start justify-center p-2">
+            <motion.div
+              className="w-1.5 h-1.5 bg-background rounded-full"
+              animate={{ y: [0, 16, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Stats Strip */}
+      <section className="py-12 bg-secondary text-secondary-foreground">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-wrap justify-center items-center gap-12 text-center"
+          >
+            <div>
+              <div className="text-4xl font-serif font-bold text-accent">2</div>
+              <div className="text-sm uppercase tracking-wider">Days</div>
+            </div>
+            <div className="hidden md:block w-px h-12 bg-accent/30" />
+            <div>
+              <div className="text-4xl font-serif font-bold text-accent">11</div>
+              <div className="text-sm uppercase tracking-wider">Events</div>
+            </div>
+            <div className="hidden md:block w-px h-12 bg-accent/30" />
+            <div>
+              <div className="text-4xl font-serif font-bold text-accent">1000+</div>
+              <div className="text-sm uppercase tracking-wider">Participants</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Theme Block */}
+      <section className="py-20 bg-background paper-texture">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center space-y-6"
+          >
+            <div className="rangoli-divider mb-8" />
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary">
+              Karma • Dharma
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Karma is action; Dharma is the compass. At Rythm 2025, every step, beat, stroke, and word 
+              aligns passion with purpose. Join us in celebrating the harmony of tradition and modernity.
+            </p>
+            <div className="rangoli-divider mt-8" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Featured Events Grid */}
+      <section className="py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+              Featured Events
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore 11 thrilling competitions across dance, music, arts, debate, and more
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {eventsData.map((event, index) => (
+              <EventCard
+                key={event.id}
+                title={event.title}
+                subtitle={event.subtitle}
+                category={event.category}
+                teamSize={event.teamSize}
+                image={event.image}
+                slug={event.slug}
+                delay={index * 0.05}
+              />
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Link to="/events">View All Events</Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Attend */}
+      <section className="py-20 bg-gradient-to-b from-background to-card paper-texture">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="font-serif text-4xl md:text-5xl font-bold text-center text-primary mb-16"
+          >
+            Why Attend Rythm 2025?
+          </motion.h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Trophy,
+                title: "Compete & Shine",
+                description: "State-level recognition and prizes for top performers across all events"
+              },
+              {
+                icon: Users,
+                title: "Learn & Network",
+                description: "Expert juries, masterclasses, and connections with talented peers"
+              },
+              {
+                icon: Sparkles,
+                title: "Celebrate Culture",
+                description: "Heritage meets modern staging in a celebration of Indian traditions"
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 }}
+              >
+                <Card className="text-center p-8 h-full border-2 border-accent/20 hover:border-accent/40 transition-all hover:shadow-gold">
+                  <CardContent className="space-y-4 p-0">
+                    <div className="inline-flex p-4 rounded-full bg-accent/10">
+                      <item.icon className="w-8 h-8 text-accent" />
+                    </div>
+                    <h3 className="font-serif text-2xl font-semibold text-primary">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Logistics Callout */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center space-y-8"
+            >
+              <h2 className="font-serif text-4xl md:text-5xl font-bold">Event Details</h2>
+              
+              <div className="grid md:grid-cols-3 gap-8 mt-12">
+                <div className="space-y-2">
+                  <Calendar className="w-8 h-8 text-accent mx-auto" />
+                  <h3 className="font-serif text-xl font-semibold">Dates</h3>
+                  <p className="text-sm opacity-90">November 4-5, 2025</p>
+                </div>
+                <div className="space-y-2">
+                  <MapPin className="w-8 h-8 text-accent mx-auto" />
+                  <h3 className="font-serif text-xl font-semibold">Venue</h3>
+                  <p className="text-sm opacity-90">Sanskriti Auditorium & Grounds<br />Aryavarta College, Jaipur</p>
+                </div>
+                <div className="space-y-2">
+                  <Clock className="w-8 h-8 text-accent mx-auto" />
+                  <h3 className="font-serif text-xl font-semibold">Timings</h3>
+                  <p className="text-sm opacity-90">Entry: 8:30 AM<br />Start: 9:30 AM</p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4 justify-center pt-8">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Link to="/register">Register Now</Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                  <Link to="/contact">Volunteer</Link>
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
