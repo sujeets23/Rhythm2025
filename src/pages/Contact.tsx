@@ -37,7 +37,7 @@ export default function Contact() {
     <>
       <SEO 
         title="Contact — Rythm 2025" 
-        description="Get in touch with Team Rythm 2025. Located at RLSI BCA Campus, Belgaum"
+        description="Get in touch with Team Rythm 2025. Located at RLS BCA Campus, Belgaum"
         path="/contact"
       />
 
@@ -139,7 +139,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">Venue</h3>
                       <p className="text-muted-foreground">
-                        RLSI BCA Campus<br />
+                        RLS BCA Campus<br />
                         Belgaum, Karnataka
                       </p>
                     </div>
@@ -157,7 +157,7 @@ export default function Contact() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="RLSI BCA Campus, Belgaum"
+                  title="RLS BCA Campus, Belgaum"
                 />
               </div>
             </motion.div>

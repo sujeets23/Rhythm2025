@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { EventCard } from "@/components/EventCard";
 import { eventsData } from "@/lib/eventsData";
-import heroBg from "@/assets/hero-competition-bg.jpg";
+import heroBg from "@/assets/hero-dharma-bg.jpg";
 import rhythmLogo from "@/assets/rhythm-logo.png";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <SEO 
         title="Rythm 2025 — Karma • Dharma" 
-        description="Inter College Fest celebrating talent, tradition, and purpose • Nov 4-5, 2025 at RLSI BCA Campus, Belgaum"
+        description="Inter College Fest celebrating talent, tradition, and purpose • Nov 4-5, 2025 at RLS BCA Campus, Belgaum"
         path="/"
       />
 
@@ -303,7 +303,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <MapPin className="w-8 h-8 text-accent mx-auto" />
                   <h3 className="font-serif text-xl font-semibold">Venue</h3>
-                  <p className="text-sm opacity-90">RLSI BCA Campus<br />Belgaum, Karnataka</p>
+                  <p className="text-sm opacity-90">RLS BCA Campus<br />Belgaum, Karnataka</p>
                 </div>
                 <div className="space-y-2">
                   <Clock className="w-8 h-8 text-accent mx-auto" />

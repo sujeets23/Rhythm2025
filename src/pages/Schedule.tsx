@@ -69,7 +69,7 @@ export default function Schedule() {
     <>
       <SEO 
         title="Schedule — Rythm 2025" 
-        description="Two-day festival schedule for Rythm 2025 featuring dance, music, debate, arts, fashion, and more at RLSI BCA Campus, Belgaum"
+        description="Two-day festival schedule for Rythm 2025 featuring dance, music, debate, arts, fashion, and more at RLS BCA Campus, Belgaum"
         path="/schedule"
       />
 
@@ -91,7 +91,7 @@ export default function Schedule() {
               <div className="flex flex-wrap gap-4 justify-center pt-4 text-sm">
                 <div className="flex items-center gap-2">
                   <MapPin size={16} className="text-accent" />
-                  <span>RLSI BCA Campus, Belgaum, Karnataka</span>
+                  <span>RLS BCA Campus, Belgaum, Karnataka</span>
                 </div>
               </div>
             </motion.div>

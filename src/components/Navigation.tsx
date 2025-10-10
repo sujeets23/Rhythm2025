@@ -64,8 +64,8 @@ export const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
               </Link>
             ))}
-            <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-gold">
-              <Link to="/register">Register Now</Link>
+            <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-gold">
+              <Link to="/events">Events</Link>
             </Button>
           </div>
 
@@ -103,8 +103,8 @@ export const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">
-                <Link to="/register">Register Now</Link>
+              <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
+                <Link to="/events">Events</Link>
               </Button>
             </div>
           </motion.div>
