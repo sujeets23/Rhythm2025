@@ -37,7 +37,7 @@ export default function Contact() {
     <>
       <SEO 
         title="Contact — Rythm 2025" 
-        description="Get in touch with Rythm 2025 organizers. Reach out via phone, email, or WhatsApp for any queries"
+        description="Get in touch with Team Rythm 2025. Located at RLSI BCA Campus, Belgaum"
         path="/contact"
       />
 
@@ -139,8 +139,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">Venue</h3>
                       <p className="text-muted-foreground">
-                        Sanskriti Auditorium & Grounds<br />
-                        Aryavarta College, Jaipur
+                        RLSI BCA Campus<br />
+                        Belgaum, Karnataka
                       </p>
                     </div>
                   </CardContent>
@@ -150,14 +150,14 @@ export default function Contact() {
               {/* Embedded Map */}
               <div className="rounded-lg overflow-hidden border-2 border-accent/20">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.0!2d75.8!3d26.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU0JzAwLjAiTiA3NcKwNDgnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.8!2d74.5!3d15.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUxJzAwLjAiTiA3NMKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Sanskriti Auditorium location map"
+                  title="RLSI BCA Campus, Belgaum"
                 />
               </div>
             </motion.div>

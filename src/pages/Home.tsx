@@ -6,7 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { EventCard } from "@/components/EventCard";
 import { eventsData } from "@/lib/eventsData";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-competition-bg.jpg";
+import rhythmLogo from "@/assets/rhythm-logo.png";
 
 export default function Home() {
   const floatingParticles = Array.from({ length: 8 }, (_, i) => i);
@@ -15,7 +16,7 @@ export default function Home() {
     <>
       <SEO 
         title="Rythm 2025 — Karma • Dharma" 
-        description="Inter PUC Fest celebrating talent, tradition, and purpose • Nov 4-5, 2025 at Sanskriti Auditorium, Aryavarta College, Jaipur"
+        description="Inter College Fest celebrating talent, tradition, and purpose • Nov 4-5, 2025 at RLSI BCA Campus, Belgaum"
         path="/"
       />
 
@@ -75,9 +76,14 @@ export default function Home() {
               <span className="text-accent font-serif text-lg md:text-xl">॥</span>
             </motion.div>
 
-            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-background drop-shadow-2xl">
-              Rythm 2025
-            </h1>
+            <motion.img 
+              src={rhythmLogo} 
+              alt="Rhythm 2k25 golden script logo" 
+              className="w-64 md:w-96 lg:w-[28rem] mx-auto drop-shadow-2xl"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            />
             
             <p className="font-serif text-2xl md:text-3xl text-accent drop-shadow-lg">
               Karma • Dharma
@@ -98,21 +104,19 @@ export default function Home() {
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow font-semibold"
               >
-                <Link to="/register">Register Now</Link>
+                <Link to="/events">Events</Link>
               </Button>
               <Button 
                 asChild 
                 size="lg" 
-                variant="outline" 
-                className="border-2 border-background text-background hover:bg-background hover:text-primary"
+                className="bg-background hover:bg-background/90 text-primary border-2 border-background font-semibold"
               >
                 <Link to="/events">View Events</Link>
               </Button>
               <Button 
                 asChild 
                 size="lg" 
-                variant="outline" 
-                className="border-2 border-background text-background hover:bg-background hover:text-primary"
+                className="bg-background hover:bg-background/90 text-primary border-2 border-background font-semibold"
               >
                 <Link to="/schedule">See Schedule</Link>
               </Button>
@@ -153,11 +157,6 @@ export default function Home() {
             <div>
               <div className="text-4xl font-serif font-bold text-accent">11</div>
               <div className="text-sm uppercase tracking-wider">Events</div>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-accent/30" />
-            <div>
-              <div className="text-4xl font-serif font-bold text-accent">1000+</div>
-              <div className="text-sm uppercase tracking-wider">Participants</div>
             </div>
           </motion.div>
         </div>
@@ -304,7 +303,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <MapPin className="w-8 h-8 text-accent mx-auto" />
                   <h3 className="font-serif text-xl font-semibold">Venue</h3>
-                  <p className="text-sm opacity-90">Sanskriti Auditorium & Grounds<br />Aryavarta College, Jaipur</p>
+                  <p className="text-sm opacity-90">RLSI BCA Campus<br />Belgaum, Karnataka</p>
                 </div>
                 <div className="space-y-2">
                   <Clock className="w-8 h-8 text-accent mx-auto" />
@@ -315,7 +314,7 @@ export default function Home() {
 
               <div className="flex flex-wrap gap-4 justify-center pt-8">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                  <Link to="/register">Register Now</Link>
+                  <Link to="/events">View Events</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                   <Link to="/contact">Volunteer</Link>
