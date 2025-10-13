@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { EventCard } from "@/components/EventCard";
 import { eventsData } from "@/lib/eventsData";
-import heroBg from "@/assets/hero-dharma-bg.jpg";
+import heroBg from "@/assets/hero-dharma-bg.png";
 import rhythmLogo from "@/assets/rhythm-logo.png";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
         <motion.div 
           className="absolute inset-0 z-0"
           style={{ 
-            backgroundImage: `linear-gradient(rgba(107, 17, 47, 0.7), rgba(107, 17, 47, 0.5)), url(${heroBg})`,
+            backgroundImage: `url(${heroBg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

@@ -31,20 +31,13 @@ export default function EventDetail() {
     }
   };
 
-  const sections = [
-    { id: "overview", label: "Overview" },
-    { id: "format", label: "Format" },
-    { id: "eligibility", label: "Eligibility" },
-    { id: "rules", label: "Rules" },
-    { id: "judging", label: "Judging" },
-    { id: "notes", label: "Important Notes" },
-  ];
+  // EventDetail now displays only core fields: title, subtitle, category, teamSize, timeLimit (if present), coordinators, technicalRequirements, and CTA.
 
   return (
     <>
       <SEO 
         title={`${event.title} — Rythm 2025`}
-        description={`${event.overview.substring(0, 150)}...`}
+        description={event.subtitle}
         path={`/events/${event.slug}`}
       />
 
@@ -155,112 +148,30 @@ export default function EventDetail() {
           </div>
         </section>
 
-        {/* In-page Navigation */}
-        <div className="sticky top-16 z-40 bg-card border-y border-border shadow-sm">
-          <div className="container mx-auto px-4">
-            <nav className="flex gap-6 overflow-x-auto py-4">
-              {sections.map((section) => (
-                <a
-                  key={section.id}
-                  href={`#${section.id}`}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary whitespace-nowrap transition-colors"
-                >
-                  {section.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-
-        {/* Content Sections */}
+        {/* Content */}
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto space-y-16">
-            {/* Overview */}
-            <section id="overview" className="scroll-mt-32">
-              <h2 className="font-serif text-3xl font-bold text-primary mb-4">Overview</h2>
-              <p className="text-lg text-foreground leading-relaxed">{event.overview}</p>
-            </section>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div>
+              <h2 className="font-serif text-3xl font-bold text-primary mb-2">About</h2>
+              <p className="text-lg text-foreground leading-relaxed">{event.subtitle}</p>
+            </div>
 
-            {/* Categories/Format */}
-            {event.categories && (
-              <section id="format" className="scroll-mt-32">
-                <h2 className="font-serif text-3xl font-bold text-primary mb-4">Categories & Format</h2>
-                <ul className="space-y-2">
-                  {event.categories.map((cat, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-accent mt-1">•</span>
-                      <span className="text-foreground">{cat}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            )}
-
-            {/* Eligibility */}
-            <section id="eligibility" className="scroll-mt-32">
-              <h2 className="font-serif text-3xl font-bold text-primary mb-4">Eligibility</h2>
-              <ul className="space-y-2">
-                {event.eligibility.map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="text-accent mt-1">•</span>
-                    <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            {/* Rules & Requirements */}
-            <section id="rules" className="scroll-mt-32">
-              <h2 className="font-serif text-3xl font-bold text-primary mb-4">Rules & Requirements</h2>
-              <ul className="space-y-3">
-                {event.rules.map((rule, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 text-accent flex items-center justify-center text-sm font-semibold">
-                      {i + 1}
-                    </span>
-                    <span className="text-foreground pt-0.5">{rule}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-
-            {/* Judging Criteria */}
-            <section id="judging" className="scroll-mt-32">
-              <h2 className="font-serif text-3xl font-bold text-primary mb-4">Judging Criteria</h2>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {event.judging.map((criterion, i) => (
-                  <Card key={i} className="border-2 border-accent/20">
-                    <CardContent className="p-4">
-                      <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-semibold text-foreground">{criterion.criterion}</h4>
-                        <span className="text-accent font-bold text-lg">{criterion.weight}</span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+            {/* Basic details */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <div className="text-sm text-muted-foreground">Category</div>
+                <div className="font-medium">{event.category}</div>
               </div>
-            </section>
+              {event.teamSize && (
+                <div className="space-y-2">
+                  <div className="text-sm text-muted-foreground">Team Size</div>
+                  <div className="font-medium">{event.teamSize}</div>
+                </div>
+              )}
+            </div>
 
-            {/* Important Notes */}
-            <section id="notes" className="scroll-mt-32">
-              <h2 className="font-serif text-3xl font-bold text-primary mb-4">Important Notes</h2>
-              <Card className="bg-accent/5 border-2 border-accent/30">
-                <CardContent className="p-6">
-                  <ul className="space-y-3">
-                    {event.importantNotes.map((note, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="text-accent mt-1">⚠</span>
-                        <span className="text-foreground">{note}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </section>
-
-            {/* Technical Requirements (if any) */}
             {event.technicalRequirements && (
-              <section className="scroll-mt-32">
+              <div>
                 <h3 className="font-serif text-2xl font-semibold text-primary mb-4">Technical Requirements</h3>
                 <ul className="space-y-2">
                   {event.technicalRequirements.map((req, i) => (
@@ -270,7 +181,7 @@ export default function EventDetail() {
                     </li>
                   ))}
                 </ul>
-              </section>
+              </div>
             )}
 
             {/* Bottom CTA */}
