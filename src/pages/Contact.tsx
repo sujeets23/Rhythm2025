@@ -37,7 +37,7 @@ export default function Contact() {
     <>
       <SEO 
         title="Contact — Rythm 2025" 
-        description="Get in touch with Team Rythm 2025. Located at RLS BCA Campus, Belgaum"
+        description="Get in touch with Team Rythm 2025. Located at R.L. Science Institute (BCA), Belagavi"
         path="/contact"
       />
 
@@ -84,12 +84,12 @@ export default function Contact() {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Helpdesk</h3>
+                      <h3 className="font-semibold mb-1">Women Helpline</h3>
                       <a 
-                        href="tel:+919876511111" 
+                        href="tel:+919036320021" 
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        +91-98765-11111
+                        +91-90363-20021
                       </a>
                     </div>
                   </CardContent>
@@ -103,10 +103,10 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <a 
-                        href="mailto:hello@rythmfest.in" 
+                        href="mailto:info@rlsibca.edu" 
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        hello@rythmfest.in
+                        info@rlsibca.edu
                       </a>
                     </div>
                   </CardContent>
@@ -120,7 +120,7 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">WhatsApp</h3>
                       <a 
-                        href={`https://wa.me/919876511111?text=${encodeURIComponent("Hello! I have a question about Rythm 2025.")}`}
+                        href={`https://wa.me/919036320021?text=${encodeURIComponent("Hello! I have a question about Rythm 2025.")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary transition-colors"
@@ -139,8 +139,9 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">Venue</h3>
                       <p className="text-muted-foreground">
-                        RLS BCA Campus<br />
-                        Belgaum, Karnataka
+                        R.L. Science Institute (BCA Department)<br />
+                        College Road, Belagavi<br />
+                        Karnataka, India
                       </p>
                     </div>
                   </CardContent>
@@ -157,7 +158,7 @@ export default function Contact() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="RLS BCA Campus, Belgaum"
+                  title="R.L. Science Institute, Belagavi"
                 />
               </div>
             </motion.div>

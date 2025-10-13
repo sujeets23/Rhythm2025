@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <SEO 
         title="Rythm 2025 — Karma • Dharma" 
-        description="Inter College Fest celebrating talent, tradition, and purpose • Nov 4-5, 2025 at RLS BCA Campus, Belgaum"
+        description="Inter PUC Fest at R.L. Science Institute (BCA), Belagavi • Nov 4-5, 2025 • Celebrating talent, tradition & purpose since 1999"
         path="/"
       />
 
@@ -69,11 +69,11 @@ export default function Home() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-block"
+              className="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/40"
             >
-              <span className="text-accent font-serif text-lg md:text-xl">॥</span>
-              <span className="mx-3 text-accent text-sm md:text-base tracking-widest">NOVEMBER 4-5, 2025</span>
-              <span className="text-accent font-serif text-lg md:text-xl">॥</span>
+              <span className="text-white font-serif text-lg md:text-xl">॥</span>
+              <span className="mx-3 text-white text-sm md:text-base tracking-widest font-bold">NOVEMBER 4-5, 2025</span>
+              <span className="text-white font-serif text-lg md:text-xl">॥</span>
             </motion.div>
 
             <motion.img 
@@ -303,7 +303,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <MapPin className="w-8 h-8 text-accent mx-auto" />
                   <h3 className="font-serif text-xl font-semibold">Venue</h3>
-                  <p className="text-sm opacity-90">RLS BCA Campus<br />Belgaum, Karnataka</p>
+                  <p className="text-sm opacity-90">R.L. Science Institute (BCA)<br />College Road, Belagavi</p>
                 </div>
                 <div className="space-y-2">
                   <Clock className="w-8 h-8 text-accent mx-auto" />

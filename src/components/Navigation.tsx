@@ -30,14 +30,20 @@ export const Navigation = () => {
   ];
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-card/95 backdrop-blur-md shadow-elegant" : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto px-4">
+    <>
+      {/* College Name Banner */}
+      <div className="bg-primary text-primary-foreground py-2 text-center text-xs md:text-sm font-medium">
+        KLE Society's College of Bachelor of Computer Application RLSI (Autonomous), Belagavi
+      </div>
+      
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className={`sticky top-0 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-card/95 backdrop-blur-md shadow-elegant" : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto px-4">
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
@@ -65,7 +71,7 @@ export const Navigation = () => {
               </Link>
             ))}
             <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-gold">
-              <Link to="/events">Events</Link>
+              <Link to="/register-gc">Register for GC</Link>
             </Button>
           </div>
 
@@ -104,12 +110,13 @@ export const Navigation = () => {
                 </Link>
               ))}
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
-                <Link to="/events">Events</Link>
+                <Link to="/register-gc">Register for GC</Link>
               </Button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </motion.header>
+    </>
   );
 };

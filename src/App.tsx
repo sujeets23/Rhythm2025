@@ -12,6 +12,7 @@ import EventDetail from "./pages/EventDetail";
 import Schedule from "./pages/Schedule";
 import Contact from "./pages/Contact";
 import Register from "./pages/Register";
+import RegisterGC from "./pages/RegisterGC";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
                 <Route path="/schedule" element={<Schedule />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/register-gc" element={<RegisterGC />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
