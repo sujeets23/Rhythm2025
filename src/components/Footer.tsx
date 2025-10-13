@@ -99,8 +99,7 @@ export const Footer = () => {
         <div className="text-center text-sm opacity-90">
           <p>© 2025 Rythm Festival. All rights reserved.</p>
           <p className="mt-2">
-            Designed with love by <span className="text-accent font-medium">Nextverse</span> and{" "}
-            <span className="text-accent font-medium">Dotlabs</span>
+            Designed with love by <span className="text-accent font-medium">The Media Tribe</span>
           </p>
         </div>
       </div>
