@@ -65,17 +65,6 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 max-w-4xl mx-auto"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/40"
-            >
-              <span className="text-white font-serif text-lg md:text-xl">॥</span>
-              <span className="mx-3 text-white text-sm md:text-base tracking-widest font-bold">NOVEMBER 4-5, 2025</span>
-              <span className="text-white font-serif text-lg md:text-xl">॥</span>
-            </motion.div>
-
             <motion.img 
               src={rhythmLogo} 
               alt="Rhythm 2k25 golden script logo" 
@@ -84,6 +73,17 @@ export default function Home() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             />
+
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/40"
+            >
+              <span className="text-white font-serif text-lg md:text-xl">॥</span>
+              <span className="mx-3 text-white text-sm md:text-base tracking-widest font-bold">NOVEMBER 4-5, 2025</span>
+              <span className="text-white font-serif text-lg md:text-xl">॥</span>
+            </motion.div>
             
             <p className="font-serif text-2xl md:text-3xl text-accent drop-shadow-lg">
               Karma • Dharma
@@ -104,14 +104,14 @@ export default function Home() {
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-glow font-semibold"
               >
-                <Link to="/events">Events</Link>
+                <Link to="/events">Explore Events</Link>
               </Button>
               <Button 
                 asChild 
                 size="lg" 
                 className="bg-background hover:bg-background/90 text-primary border-2 border-background font-semibold"
               >
-                <Link to="/events">View Events</Link>
+                <Link to="/register-gc">Register for GC</Link>
               </Button>
               <Button 
                 asChild 
@@ -126,7 +126,7 @@ export default function Home() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
@@ -155,7 +155,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block w-px h-12 bg-accent/30" />
             <div>
-              <div className="text-4xl font-serif font-bold text-accent">11</div>
+              <div className="text-4xl font-serif font-bold text-accent">12</div>
               <div className="text-sm uppercase tracking-wider">Events</div>
             </div>
           </motion.div>
@@ -198,7 +198,7 @@ export default function Home() {
               Featured Events
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore 11 thrilling competitions across dance, music, arts, debate, and more
+              Explore 12 thrilling competitions across dance, music, arts, debate, and more
             </p>
           </motion.div>
 

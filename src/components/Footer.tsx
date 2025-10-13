@@ -26,9 +26,13 @@ export const Footer = () => {
             <p className="text-sm opacity-90">
               Karma • Dharma — action with purpose, tradition with a modern pulse.
             </p>
-            <div className="flex items-center gap-2 text-sm">
-              <MapPin size={16} />
-              <span>Sanskriti Auditorium, Jaipur</span>
+            <div className="text-sm opacity-90 space-y-1">
+              <p className="font-semibold text-accent">KLE Society's College of BCA</p>
+              <p>R.L. Science Institute (Autonomous)</p>
+              <div className="flex items-start gap-2">
+                <MapPin size={16} className="mt-0.5 flex-shrink-0" />
+                <span>College Road, Belagavi, Karnataka</span>
+              </div>
             </div>
           </div>
 
@@ -66,24 +70,24 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
                 <Phone size={16} />
-                <a href="tel:+919876511111" className="hover:text-accent transition-colors">
-                  +91-98765-11111
+                <a href="tel:+919036320021" className="hover:text-accent transition-colors">
+                  +91-90363-20021
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Mail size={16} />
-                <a href="mailto:hello@rythmfest.in" className="hover:text-accent transition-colors">
-                  hello@rythmfest.in
+                <a href="mailto:info@rlsibca.edu" className="hover:text-accent transition-colors">
+                  info@rlsibca.edu
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <a 
-                  href={`https://wa.me/919876511111?text=${encodeURIComponent("Hello! I have a question about Rythm 2025.")}`}
+                  href={`https://wa.me/919036320021?text=${encodeURIComponent("Hello! I have a question about Rythm 2025.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
                 >
-                  WhatsApp Helpdesk
+                  WhatsApp Women Helpline
                 </a>
               </li>
             </ul>

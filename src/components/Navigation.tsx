@@ -32,8 +32,8 @@ export const Navigation = () => {
   return (
     <>
       {/* College Name Banner */}
-      <div className="bg-primary text-primary-foreground py-2 text-center text-xs md:text-sm font-medium">
-        KLE Society's College of Bachelor of Computer Application RLSI (Autonomous), Belagavi
+      <div className="bg-primary text-primary-foreground py-1.5 text-center text-[10px] md:text-xs font-medium tracking-wide">
+        KLE Society's College of BCA RLSI (Autonomous), Belagavi
       </div>
       
       <motion.header
