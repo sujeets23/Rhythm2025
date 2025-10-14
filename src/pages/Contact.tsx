@@ -78,221 +78,79 @@ export default function Contact() {
               </div>
 
               <div className="space-y-6">
-                <Card className="border-2 border-accent/20 hover:border-accent/40 transition-colors">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="p-3 rounded-full bg-accent/10">
-                      <Phone className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Women Helpline</h3>
-                      <a 
-                        href="tel:+919036320021" 
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        +91-90363-20021
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-accent/20 hover:border-accent/40 transition-colors">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="p-3 rounded-full bg-accent/10">
-                      <Mail className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <a 
-                        href="mailto:info@rlsibca.edu" 
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        info@rlsibca.edu
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-accent/20 hover:border-accent/40 transition-colors">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="p-3 rounded-full bg-accent/10">
-                      <MessageCircle className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">WhatsApp</h3>
-                      <a 
-                        href={`https://wa.me/919036320021?text=${encodeURIComponent("Hello! I have a question about Rythm 2025.")}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Chat with us
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 border-accent/20 hover:border-accent/40 transition-colors">
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <div className="p-3 rounded-full bg-accent/10">
-                      <MapPin className="w-6 h-6 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Venue</h3>
-                      <p className="text-muted-foreground">
-                        R.L. Science Institute (BCA Department)<br />
-                        College Road, Belagavi<br />
-                        Karnataka, India
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                {/* Primary contact info is surfaced in the Reach our team section at the right. */}
+                <p className="text-muted-foreground">For quick assistance, use the contacts on the right or the venue map below.</p>
               </div>
 
               {/* Embedded Map */}
               <div className="rounded-lg overflow-hidden border-2 border-accent/20">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.8!2d74.5!3d15.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDUxJzAwLjAiTiA3NMKwMzAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.834358832274!2d74.5069079!3d15.865300800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf66af3b639213%3A0xef0ad5fed0ce676c!2sKLE&#39;S%20College%20of%20BCA%2C%20RLSI!5e0!3m2!1sen!2sin!4v1760425642871!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="R.L. Science Institute, Belagavi"
+                  title="KLE's College of BCA, RLSI"
                 />
               </div>
             </motion.div>
 
-            {/* Contact Form */}
+            {/* Instead of a message form, show highlighted contacts for quick help */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Card className="border-2 border-primary/20">
-                <CardContent className="p-8">
-                  <h2 className="font-serif text-2xl font-bold text-primary mb-6">
-                    Send us a Message
-                  </h2>
+              <div className="space-y-4">
+                <h2 className="font-serif text-2xl font-bold text-primary">Reach our team</h2>
+                <p className="text-muted-foreground">For registration help and event queries, contact the following coordinators directly on WhatsApp or by phone.</p>
 
-                  {isSubmitted ? (
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      className="text-center py-12 space-y-4"
-                    >
-                      <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
-                        <CheckCircle className="w-8 h-8 text-accent" />
-                      </div>
-                      <h3 className="font-serif text-2xl font-semibold text-primary">
-                        Message Sent!
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Thank you for reaching out. We'll get back to you shortly.
-                      </p>
-                    </motion.div>
-                  ) : (
-                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 gap-4">
+                  {/* Joey */}
+                  <Card className="border-2 border-accent/20 hover:border-accent/40">
+                    <CardContent className="p-4 flex items-center justify-between">
                       <div>
-                        <Label htmlFor="name">Name *</Label>
-                        <Input
-                          id="name"
-                          {...register("name", { 
-                            required: "Name is required",
-                            maxLength: { value: 100, message: "Name must be less than 100 characters" }
-                          })}
-                          placeholder="Your full name"
-                          className={errors.name ? "border-destructive" : ""}
-                        />
-                        {errors.name && (
-                          <p className="text-sm text-destructive mt-1">{errors.name.message}</p>
-                        )}
+                        <h4 className="font-semibold">Joey — Registration Coordinator</h4>
+                        <p className="text-sm text-muted-foreground">Available for event & registration queries</p>
                       </div>
+                      <div className="flex flex-col items-end gap-2">
+                        <a
+                          className="inline-flex items-center px-3 py-1.5 rounded-md bg-green-600 text-white text-sm"
+                          href={`https://wa.me/917406165866?text=${encodeURIComponent("Hello Joey, I need help regarding Rythm 2025.")}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          WhatsApp
+                        </a>
+                        <a className="text-sm text-primary hover:underline" href="tel:+917406165866">Call +91 74061 65866</a>
+                      </div>
+                    </CardContent>
+                  </Card>
 
+                  {/* R K Aditya */}
+                  <Card className="border-2 border-accent/20 hover:border-accent/40">
+                    <CardContent className="p-4 flex items-center justify-between">
                       <div>
-                        <Label htmlFor="email">Email *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          {...register("email", { 
-                            required: "Email is required",
-                            pattern: {
-                              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                              message: "Invalid email address"
-                            }
-                          })}
-                          placeholder="your.email@example.com"
-                          className={errors.email ? "border-destructive" : ""}
-                        />
-                        {errors.email && (
-                          <p className="text-sm text-destructive mt-1">{errors.email.message}</p>
-                        )}
+                        <h4 className="font-semibold">R K Aditya — Event Head</h4>
+                        <p className="text-sm text-muted-foreground">Coordinator for overall event logistics</p>
                       </div>
-
-                      <div>
-                        <Label htmlFor="phone">Phone *</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          {...register("phone", { 
-                            required: "Phone is required",
-                            pattern: {
-                              value: /^[0-9]{10}$/,
-                              message: "Please enter a valid 10-digit phone number"
-                            }
-                          })}
-                          placeholder="10-digit mobile number"
-                          className={errors.phone ? "border-destructive" : ""}
-                        />
-                        {errors.phone && (
-                          <p className="text-sm text-destructive mt-1">{errors.phone.message}</p>
-                        )}
+                      <div className="flex flex-col items-end gap-2">
+                        <a
+                          className="inline-flex items-center px-3 py-1.5 rounded-md bg-green-600 text-white text-sm"
+                          href={`https://wa.me/918919419327?text=${encodeURIComponent("Hello Aditya, I need help regarding Rythm 2025.")}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          WhatsApp
+                        </a>
+                        <a className="text-sm text-primary hover:underline" href="tel:+918919419327">Call +91 89194 19327</a>
                       </div>
-
-                      <div>
-                        <Label htmlFor="institute">Institute *</Label>
-                        <Input
-                          id="institute"
-                          {...register("institute", { 
-                            required: "Institute name is required",
-                            maxLength: { value: 150, message: "Institute name must be less than 150 characters" }
-                          })}
-                          placeholder="Your college/institution"
-                          className={errors.institute ? "border-destructive" : ""}
-                        />
-                        {errors.institute && (
-                          <p className="text-sm text-destructive mt-1">{errors.institute.message}</p>
-                        )}
-                      </div>
-
-                      <div>
-                        <Label htmlFor="message">Message *</Label>
-                        <Textarea
-                          id="message"
-                          {...register("message", { 
-                            required: "Message is required",
-                            maxLength: { value: 1000, message: "Message must be less than 1000 characters" }
-                          })}
-                          placeholder="How can we help you?"
-                          rows={5}
-                          className={errors.message ? "border-destructive" : ""}
-                        />
-                        {errors.message && (
-                          <p className="text-sm text-destructive mt-1">{errors.message.message}</p>
-                        )}
-                      </div>
-
-                      <Button 
-                        type="submit" 
-                        size="lg" 
-                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                      >
-                        Send Message
-                      </Button>
-                    </form>
-                  )}
-                </CardContent>
-              </Card>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>

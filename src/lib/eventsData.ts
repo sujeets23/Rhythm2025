@@ -15,6 +15,7 @@ export interface EventData {
   formUrl: string; // Placeholder for Google Form
   timeLimit?: string;
   technicalRequirements?: string[];
+  categories?: { label: string; formUrl: string; teamSize?: string }[];
 }
 
 export const eventsData: EventData[] = [
@@ -23,12 +24,15 @@ export const eventsData: EventData[] = [
     title: "Nritya Kala",
     slug: "nritya-kala",
     subtitle: "Solo & Group Dance",
-    category: "Solo/Team",
-    teamSize: "Solo or 6-12 (Group)",
+    category: "Performing",
     image: "nritya-kala",
     coordinators: [{ name: "Karthik", phone: "7338128020" }],
     formUrl: "#dance-form",
-    technicalRequirements: ["MP3 format", "USB backup", "Mic requirements in advance"]
+    technicalRequirements: ["MP3 format", "USB backup", "Mic requirements in advance"],
+    categories: [
+      { label: "Solo", formUrl: "#dance-solo-form" },
+      { label: "Group", formUrl: "#dance-group-form", teamSize: "6-12 members" }
+    ]
   },
   {
     id: "solo-singing",

@@ -230,57 +230,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Attend */}
-      <section className="py-20 bg-gradient-to-b from-background to-card paper-texture">
-        <div className="container mx-auto px-4">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="font-serif text-4xl md:text-5xl font-bold text-center text-primary mb-16"
-          >
-            Why Attend Rythm 2025?
-          </motion.h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Trophy,
-                title: "Compete & Shine",
-                description: "State-level recognition and prizes for top performers across all events"
-              },
-              {
-                icon: Users,
-                title: "Learn & Network",
-                description: "Expert juries, masterclasses, and connections with talented peers"
-              },
-              {
-                icon: Sparkles,
-                title: "Celebrate Culture",
-                description: "Heritage meets modern staging in a celebration of Indian traditions"
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-              >
-                <Card className="text-center p-8 h-full border-2 border-accent/20 hover:border-accent/40 transition-all hover:shadow-gold">
-                  <CardContent className="space-y-4 p-0">
-                    <div className="inline-flex p-4 rounded-full bg-accent/10">
-                      <item.icon className="w-8 h-8 text-accent" />
-                    </div>
-                    <h3 className="font-serif text-2xl font-semibold text-primary">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Why Attend section removed per request */}
 
       {/* Logistics Callout */}
       <section className="py-20 bg-primary text-primary-foreground">

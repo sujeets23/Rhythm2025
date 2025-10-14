@@ -32,7 +32,7 @@ export const Navigation = () => {
   return (
     <>
       {/* College Name Banner */}
-      <div className="bg-primary text-primary-foreground py-1.5 text-center text-[10px] md:text-xs font-medium tracking-wide">
+      <div className="bg-primary text-primary-foreground py-1.5 text-center text-[32px] md:text-xl font-medium tracking-wide">
         KLE Society's College of BCA RLSI (Autonomous), Belagavi
       </div>
       
@@ -50,7 +50,7 @@ export const Navigation = () => {
             <img 
               src={rhythmLogo} 
               alt="Rhythm 2k25 golden script logo" 
-              className="h-12 w-auto transition-transform group-hover:scale-105"
+              className="h-16  w-auto transition-transform group-hover:scale-140"
             />
           </Link>
 

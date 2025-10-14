@@ -102,16 +102,29 @@ export default function EventDetail() {
                 <Card className="bg-card/50 border-2 border-primary/20">
                   <CardContent className="p-6 space-y-4">
                     <h3 className="font-serif text-lg font-semibold">Ready to participate?</h3>
-                    <Button 
-                      asChild 
-                      size="lg" 
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                    >
-                      <a href={event.formUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2" size={18} />
-                        Register for {event.title}
-                      </a>
-                    </Button>
+                    {event.categories ? (
+                      <div className="flex flex-col gap-3">
+                        {event.categories.map((cat, idx) => (
+                          <Button key={idx} asChild size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                            <a href={cat.formUrl} target="_blank" rel="noopener noreferrer">
+                              <ExternalLink className="mr-2" size={18} />
+                              Register — {cat.label} {cat.teamSize ? `(${cat.teamSize})` : ""}
+                            </a>
+                          </Button>
+                        ))}
+                      </div>
+                    ) : (
+                      <Button 
+                        asChild 
+                        size="lg" 
+                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                      >
+                        <a href={event.formUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2" size={18} />
+                          Register for {event.title}
+                        </a>
+                      </Button>
+                    )}
 
                     <div className="pt-4 border-t border-border">
                       <p className="text-sm text-muted-foreground mb-3">Event Coordinators:</p>

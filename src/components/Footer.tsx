@@ -66,30 +66,11 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-2 text-sm">
-                <Phone size={16} />
-                <a href="tel:+919036320021" className="hover:text-accent transition-colors">
-                  +91-90363-20021
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Mail size={16} />
-                <a href="mailto:info@rlsibca.edu" className="hover:text-accent transition-colors">
-                  info@rlsibca.edu
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <a 
-                  href={`https://wa.me/919036320021?text=${encodeURIComponent("Hello! I have a question about Rythm 2025.")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
-                >
-                  WhatsApp Women Helpline
-                </a>
-              </li>
+            <h3 className="font-serif text-lg font-semibold mb-4">Contact & Venue</h3>
+            <ul className="space-y-3 text-sm text-muted-foreground">
+              <li>R.L. Science Institute (BCA Department)</li>
+              <li>College Road, Belagavi, Karnataka</li>
+              <li><a href="/contact" className="hover:text-accent transition-colors">Visit Contact Page</a></li>
             </ul>
           </div>
         </div>
