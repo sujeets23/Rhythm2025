@@ -4,6 +4,8 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import rhythmLogo from "@/assets/rhythm-logo.png";
+const kleLogoSrc = new URL("../assets/kle logo.PNG", import.meta.url).href;
+const clgLogoSrc = new URL("../assets/clg-logo.PNG", import.meta.url).href;
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,12 +30,19 @@ export const Navigation = () => {
     { name: "Schedule", path: "/schedule" },
     { name: "Contact", path: "/contact" },
   ];
-
   return (
     <>
-      {/* College Name Banner */}
-      <div className="bg-primary text-primary-foreground py-1.5 text-center text-[32px] md:text-xl font-medium tracking-wide">
-        KLE Society's College of BCA RLSI (Autonomous), Belagavi
+      {/* College Name Banner with logos */}
+      <div className="bg-primary text-primary-foreground py-1.5">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-3 text-center">
+            <img src={kleLogoSrc} alt="KLE Society Logo" className="h-6 w-auto md:h-7" />
+            <span className="text-sm md:text-base font-medium tracking-wide">
+              KLE Society's College of BCA RLSI (Autonomous), Belagavi
+            </span>
+            <img src={clgLogoSrc} alt="College Emblem" className="h-6 w-auto md:h-7" />
+          </div>
+        </div>
       </div>
       
       <motion.header
@@ -53,8 +62,6 @@ export const Navigation = () => {
               className="h-16  w-auto transition-transform group-hover:scale-140"
             />
           </Link>
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link

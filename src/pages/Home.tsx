@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Calendar, MapPin, Clock, Trophy, Users, Sparkles } from "lucide-react";
+import { Calendar, MapPin, Trophy, Users, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
@@ -244,7 +244,7 @@ export default function Home() {
             >
               <h2 className="font-serif text-4xl md:text-5xl font-bold">Event Details</h2>
               
-              <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="grid md:grid-cols-2 gap-8 mt-12">
                 <div className="space-y-2">
                   <Calendar className="w-8 h-8 text-accent mx-auto" />
                   <h3 className="font-serif text-xl font-semibold">Dates</h3>
@@ -255,19 +255,11 @@ export default function Home() {
                   <h3 className="font-serif text-xl font-semibold">Venue</h3>
                   <p className="text-sm opacity-90">R.L. Science Institute (BCA)<br />College Road, Belagavi</p>
                 </div>
-                <div className="space-y-2">
-                  <Clock className="w-8 h-8 text-accent mx-auto" />
-                  <h3 className="font-serif text-xl font-semibold">Timings</h3>
-                  <p className="text-sm opacity-90">Entry: 8:30 AM<br />Start: 9:30 AM</p>
-                </div>
               </div>
 
               <div className="flex flex-wrap gap-4 justify-center pt-8">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Link to="/events">View Events</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-                  <Link to="/contact">Volunteer</Link>
                 </Button>
               </div>
             </motion.div>

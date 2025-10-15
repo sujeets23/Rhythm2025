@@ -18,9 +18,15 @@ export const EventCard = ({ title, subtitle, category, teamSize, image, slug, de
   // Import images dynamically
   const getImage = () => {
     try {
-      return new URL(`../assets/events/${image}.png`, import.meta.url).href;
+      // Prefer new EVENT logos directory
+      return new URL(`../assets/EVENT logos/${image}.png`, import.meta.url).href;
     } catch {
-      return "";
+      try {
+        // Fallback to legacy events directory
+        return new URL(`../assets/events/${image}.png`, import.meta.url).href;
+      } catch {
+        return "";
+      }
     }
   };
 

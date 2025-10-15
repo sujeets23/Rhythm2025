@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import rhythmLogo from "@/assets/rhythm-logo.png";
+// Resolve footer emblem logos
+const kleLogoSrc = new URL("../assets/kle logo.PNG", import.meta.url).href;
+const clgLogoSrc = new URL("../assets/clg-logo.PNG", import.meta.url).href;
 
 export const Footer = () => {
   const eventCategories = [
@@ -15,7 +18,7 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground paper-texture">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-12">
+        <div className="grid md:grid-cols-3 gap-12">
           {/* Brand */}
           <div className="space-y-4">
             <img 
@@ -64,18 +67,19 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="font-serif text-lg font-semibold mb-4">Contact & Venue</h3>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>R.L. Science Institute (BCA Department)</li>
-              <li>College Road, Belagavi, Karnataka</li>
-              <li><a href="/contact" className="hover:text-accent transition-colors">Visit Contact Page</a></li>
-            </ul>
-          </div>
+          
         </div>
 
         <div className="gold-hairline my-8" />
+
+        {/* Institute identity band */}
+        <div className="flex items-center justify-center gap-4 py-4">
+          <img src={kleLogoSrc} alt="KLE Society Logo" className="h-10 w-auto md:h-12" />
+          <span className="text-center text-base md:text-xl font-semibold tracking-wide">
+            KLE Society's College of BCA RLSI (Autonomous), Belagavi
+          </span>
+          <img src={clgLogoSrc} alt="College Emblem" className="h-10 w-auto md:h-12" />
+        </div>
 
         <div className="text-center text-sm opacity-90">
           <p>© 2025 Rythm Festival. All rights reserved.</p>

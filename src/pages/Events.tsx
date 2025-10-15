@@ -5,21 +5,24 @@ import { EventCard } from "@/components/EventCard";
 import { eventsData } from "@/lib/eventsData";
 import { Button } from "@/components/ui/button";
 
+type TypeFilter = "all" | "Solo" | "Team";
+
 export default function Events() {
-  const [typeFilter, setTypeFilter] = useState<string>("all");
-  const [dayFilter, setDayFilter] = useState<string>("all");
+  const [typeFilter, setTypeFilter] = useState<TypeFilter>("all");
 
   const filteredEvents = eventsData.filter((event) => {
-    const typeMatch = typeFilter === "all" || event.category.includes(typeFilter);
-    // For simplicity, we're not tracking days in data, so day filter is cosmetic
-    const dayMatch = dayFilter === "all";
-    return typeMatch && dayMatch;
+    if (typeFilter === "all") return true;
+    // Some data uses "Group" while others may use "Team" to mean team events
+    if (typeFilter === "Team") {
+      return event.category === "Team" || event.category === "Group";
+    }
+    return event.category === typeFilter;
   });
 
   return (
     <>
-      <SEO 
-        title="Events — Rythm 2025" 
+      <SEO
+        title="Events — Rythm 2025"
         description="Explore 11 exciting competitions at Rythm 2025 including dance, music, debate, arts, fashion, and more"
         path="/events"
       />
@@ -33,12 +36,10 @@ export default function Events() {
               animate={{ opacity: 1, y: 0 }}
               className="text-center max-w-3xl mx-auto space-y-4"
             >
-              <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary">
-                Events
-              </h1>
+              <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary">Events</h1>
               <p className="text-lg md:text-xl text-muted-foreground">
-                Discover competitions spanning dance, music, arts, debate, fashion, gaming, and more. 
-                Choose your arena and let your talent shine.
+                Discover competitions spanning dance, music, arts, debate, fashion, gaming, and more. Choose your arena
+                and let your talent shine.
               </p>
             </motion.div>
           </div>
@@ -50,12 +51,12 @@ export default function Events() {
             <div className="flex flex-wrap gap-4 justify-center">
               <div className="flex gap-2 items-center">
                 <span className="text-sm font-medium">Type:</span>
-                {["all", "Solo", "Team", "Solo/Team"].map((type) => (
+                {["all", "Solo", "Team"].map((type) => (
                   <Button
                     key={type}
                     size="sm"
-                    variant={typeFilter === type ? "default" : "outline"}
-                    onClick={() => setTypeFilter(type)}
+                    variant={typeFilter === (type as TypeFilter) ? "default" : "outline"}
+                    onClick={() => setTypeFilter(type as TypeFilter)}
                     className={typeFilter === type ? "bg-primary" : ""}
                   >
                     {type === "all" ? "All" : type}

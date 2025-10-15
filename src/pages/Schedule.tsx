@@ -11,26 +11,26 @@ interface ScheduleItem {
 
 export default function Schedule() {
   const day1: ScheduleItem[] = [
-    { no: 1, event: "Photography", location: "C2" },
-    { no: 2, event: "Mr & Miss", location: "1, 5, 6" },
-    { no: 3, event: "Arts", location: "9" },
-    { no: 4, event: "Quiz", location: "8" },
-    { no: 5, event: "Debate", location: "10" },
-    { no: 6, event: "Gaming", location: "LAB 4" },
-    { no: 7, event: "Surprise Round", location: "C3, 7" },
-    { no: 8, event: "Treasure Hunt", location: "11, 12, 13" },
+    { no: 1, event: "Music", location: "JNMC Main Stage" },
+    { no: 2, event: "Dance", location: "JNMC Main Stage" },
+    { no: 3, event: "Photography", location: "C2" },
+    { no: 4, event: "Mr & Miss", location: "1, 5, 6" },
+    { no: 5, event: "Arts", location: "9" },
+    { no: 6, event: "Quiz", location: "8" },
+    { no: 7, event: "Debate", location: "10" },
+    { no: 8, event: "Gaming", location: "LAB 4" },
+    { no: 9, event: "Surprise Round", location: "C3, 7" },
+    { no: 10, event: "Treasure Hunt", location: "11, 12, 13" },
   ];
 
   const day2: ScheduleItem[] = [
-    { no: 1, event: "Music", location: "JNMC Main Stage" },
-    { no: 2, event: "Dance", location: "JNMC Main Stage" },
-    { no: 3, event: "Fashion Show", location: "JNMC Main Stage" },
-    { no: 4, event: "Mr & Miss (Final)", location: "JNMC" },
-    { no: 5, event: "Street Play", location: "JNMC" },
-    { no: 6, event: "Gaming", location: "College (Morning), JNMC (Final)" },
-    { no: 7, event: "Photography", location: "College" },
-    { no: 8, event: "Surprise Round", location: "College" },
-    { no: 9, event: "Treasure Hunt", location: "College" },
+    { no: 1, event: "Fashion Show", location: "JNMC Main Stage" },
+    { no: 2, event: "Mr & Miss (Final)", location: "JNMC" },
+    { no: 3, event: "Street Play", location: "JNMC" },
+    { no: 4, event: "Gaming", location: "College (Morning), JNMC (Final)" },
+    { no: 5, event: "Photography", location: "College" },
+    { no: 6, event: "Surprise Round", location: "College" },
+    { no: 7, event: "Treasure Hunt", location: "College" },
   ];
 
   const TimelineItem = ({ item, index }: { item: ScheduleItem; index: number }) => (

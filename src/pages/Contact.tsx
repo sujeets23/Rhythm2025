@@ -9,6 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
+// Resolve logo image URLs from assets (handles spaces in filenames reliably)
+const kleLogoSrc = new URL("../assets/kle logo.PNG", import.meta.url).href;
+const clgLogoSrc = new URL("../assets/clg logo.png", import.meta.url).href;
 
 interface ContactFormData {
   name: string;
@@ -56,6 +59,7 @@ export default function Contact() {
               <p className="text-lg md:text-xl text-muted-foreground">
                 Have questions? We're here to help. Reach out and we'll respond as soon as possible.
               </p>
+              
             </motion.div>
           </div>
         </section>
@@ -77,13 +81,29 @@ export default function Contact() {
                 </p>
               </div>
 
+              {/* Contact & Venue Callout */}
+              <Card className="border-2 border-accent/30 bg-accent/5">
+                <CardContent className="p-6 space-y-3">
+                  <h3 className="font-serif text-2xl font-bold text-accent">Contact & Venue</h3>
+                  <div className="text-sm md:text-base">
+                    <p className="text-primary font-semibold">R.L. Science Institute (BCA Department)</p>
+                    <p className="text-muted-foreground">College Road, Belagavi, Karnataka</p>
+                  </div>
+                  <div className="pt-2">
+                    <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                      <a href="#map">View on Map</a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
               <div className="space-y-6">
                 {/* Primary contact info is surfaced in the Reach our team section at the right. */}
                 <p className="text-muted-foreground">For quick assistance, use the contacts on the right or the venue map below.</p>
               </div>
 
               {/* Embedded Map */}
-              <div className="rounded-lg overflow-hidden border-2 border-accent/20">
+              <div id="map" className="rounded-lg overflow-hidden border-2 border-accent/40 shadow-sm">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.834358832274!2d74.5069079!3d15.865300800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf66af3b639213%3A0xef0ad5fed0ce676c!2sKLE&#39;S%20College%20of%20BCA%2C%20RLSI!5e0!3m2!1sen!2sin!4v1760425642871!5m2!1sen!2sin"
                   width="100%"

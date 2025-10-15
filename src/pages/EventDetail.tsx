@@ -25,9 +25,15 @@ export default function EventDetail() {
 
   const getImage = () => {
     try {
-      return new URL(`../assets/events/${event.image}.png`, import.meta.url).href;
+      // Use EVENT logos directory
+      return new URL(`../assets/EVENT logos/${event.image}.png`, import.meta.url).href;
     } catch {
-      return "";
+      try {
+        // Fallback to legacy events directory
+        return new URL(`../assets/events/${event.image}.png`, import.meta.url).href;
+      } catch {
+        return "";
+      }
     }
   };
 
@@ -194,6 +200,27 @@ export default function EventDetail() {
                     </li>
                   ))}
                 </ul>
+              </div>
+            )}
+
+            {event.rules && (
+              <div>
+                <h3 className="font-serif text-2xl font-semibold text-primary mb-4">Rules & Regulations</h3>
+                <div className="prose prose-gray max-w-none">
+                  <div 
+                    className="text-foreground leading-relaxed space-y-4"
+                    dangerouslySetInnerHTML={{ 
+                      __html: event.rules
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+                        .replace(/^### (.*$)/gim, '<h3 class="text-xl font-semibold text-primary mt-6 mb-3">$1</h3>')
+                        .replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold text-primary mt-8 mb-4">$1</h2>')
+                        .replace(/^\- (.*$)/gim, '<li class="flex items-start gap-2 mb-2"><span class="text-accent mt-1">•</span><span>$1</span></li>')
+                        .replace(/\n\n/g, '</p><p class="mb-4">')
+                        .replace(/^(?!<[h|l])(.*$)/gim, '<p class="mb-2">$1</p>')
+                    }}
+                  />
+                </div>
               </div>
             )}
 
