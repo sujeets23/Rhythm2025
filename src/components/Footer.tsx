@@ -45,7 +45,16 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/events" className="text-sm hover:text-accent transition-colors">Events</Link></li>
               <li><Link to="/schedule" className="text-sm hover:text-accent transition-colors">Schedule</Link></li>
-              <li><Link to="/register" className="text-sm hover:text-accent transition-colors">Register</Link></li>
+              <li>
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm hover:text-accent transition-colors"
+                >
+                  Register
+                </a>
+              </li>
               <li><Link to="/contact" className="text-sm hover:text-accent transition-colors">Contact</Link></li>
             </ul>
           </div>

@@ -116,7 +116,11 @@ export default function RegisterGC() {
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                <a href={getWhatsAppLink(contacts[0].phone, contacts[0].name)} target="_blank" rel="noopener noreferrer">
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf8lfz7HIEiX5xFiamTn9HSWhk_iqXXZhpYFVU2uiDoF-5mcg/viewform?usp=header" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
                   Register Your College for GC
                 </a>
               </Button>

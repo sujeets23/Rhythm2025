@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { CheckCircle } from "lucide-react";
@@ -28,6 +28,12 @@ interface RegisterFormData {
 }
 
 export default function Register() {
+  useEffect(() => {
+    const url = "https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header";
+    // Open in same tab for clear redirect; keeps GC page separate
+    window.location.replace(url);
+  }, []);
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<RegisterFormData>();
 
