@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <SEO 
-        title="Rythm 2025 — Karma • Dharma" 
+        title="Rhythm 2025 — Karma • Dharma" 
         description="Inter PUC Fest at R.L. Science Institute (BCA), Belagavi • Nov 4-5, 2025 • Celebrating talent, tradition & purpose since 1999"
         path="/"
       />
@@ -86,7 +86,7 @@ export default function Home() {
             </motion.div>
             
             <p className="font-serif text-2xl md:text-3xl text-accent drop-shadow-lg">
-              Karma • Dharma
+              Kurukshetra
             </p>
 
             <p className="text-lg md:text-xl text-background/90 max-w-2xl mx-auto">
@@ -155,7 +155,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block w-px h-12 bg-accent/30" />
             <div>
-              <div className="text-4xl font-serif font-bold text-accent">12</div>
+              <div className="text-4xl font-serif font-bold text-accent">14</div>
               <div className="text-sm uppercase tracking-wider">Events</div>
             </div>
           </motion.div>
@@ -177,7 +177,7 @@ export default function Home() {
               Karma • Dharma
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Karma is action; Dharma is the compass. At Rythm 2025, every step, beat, stroke, and word 
+              Karma is action; Dharma is the compass. At Rhythm 2025, every step, beat, stroke, and word 
               aligns passion with purpose. Join us in celebrating the harmony of tradition and modernity.
             </p>
             <div className="rangoli-divider mt-8" />
@@ -198,7 +198,7 @@ export default function Home() {
               Featured Events
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore 12 thrilling competitions across dance, music, arts, debate, and more
+              Explore 14 thrilling competitions across dance, music, arts, debate, and more
             </p>
           </motion.div>
 

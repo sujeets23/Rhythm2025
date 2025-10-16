@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Rythm 2025 — Traditional Indian Palette */
+    /* Rhythm 2025 — Traditional Indian Palette */
     --background: 36 65% 89%;  /* Sand #F4E9D8 */
     --foreground: 0 0% 6%;      /* Onyx #101010 */
 

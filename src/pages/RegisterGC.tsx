@@ -13,15 +13,15 @@ export default function RegisterGC() {
 
   const getWhatsAppLink = (phone: string, name: string) => {
     const number = phone.replace(/[^0-9]/g, "");
-    const message = `Hello ${name}, I'd like to register for the General Championship at Rythm 2025.\n\nName: [Your Name]\nInstitute: [Your College]\nCourse/Year: [Your Year]\nEvents Participating: [List events]`;
+  const message = `Hello ${name}, I'd like to register for the General Championship at Rhythm 2025.\n\nName: [Your Name]\nInstitute: [Your College]\nCourse/Year: [Your Year]\nEvents Participating: [List events]`;
     return `https://wa.me/91${number.replace(/^91/,"")}?text=${encodeURIComponent(message)}`;
   };
 
   return (
     <>
       <SEO 
-        title="Register for General Championship — Rythm 2025" 
-        description="Register for the General Championship at Rythm 2025 and compete across multiple events"
+        title="Register for General Championship — Rhythm 2025" 
+        description="Register for the General Championship at Rhythm 2025 and compete across multiple events"
         path="/register-gc"
       />
 

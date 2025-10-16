@@ -22,8 +22,8 @@ export default function Events() {
   return (
     <>
       <SEO
-        title="Events — Rythm 2025"
-        description="Explore 11 exciting competitions at Rythm 2025 including dance, music, debate, arts, fashion, and more"
+        title="Events — Rhythm 2025"
+        description="Explore 14 exciting competitions at Rhythm 2025 including dance, music, debate, arts, fashion, and more"
         path="/events"
       />
 

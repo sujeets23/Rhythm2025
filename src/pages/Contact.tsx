@@ -39,8 +39,8 @@ export default function Contact() {
   return (
     <>
       <SEO 
-        title="Contact — Rythm 2025" 
-        description="Get in touch with Team Rythm 2025. Located at R.L. Science Institute (BCA), Belagavi"
+        title="Contact — Rhythm 2025" 
+        description="Get in touch with Team Rhythm 2025. Located at R.L. Science Institute (BCA), Belagavi"
         path="/contact"
       />
 
@@ -138,7 +138,7 @@ export default function Contact() {
                       <div className="flex flex-col items-end gap-2">
                         <a
                           className="inline-flex items-center px-3 py-1.5 rounded-md bg-green-600 text-white text-sm"
-                          href={`https://wa.me/917406165866?text=${encodeURIComponent("Hello Joey, I need help regarding Rythm 2025.")}`}
+                          href={`https://wa.me/917406165866?text=${encodeURIComponent("Hello Joey, I need help regarding Rhythm 2025.")}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -159,7 +159,7 @@ export default function Contact() {
                       <div className="flex flex-col items-end gap-2">
                         <a
                           className="inline-flex items-center px-3 py-1.5 rounded-md bg-green-600 text-white text-sm"
-                          href={`https://wa.me/918919419327?text=${encodeURIComponent("Hello Aditya, I need help regarding Rythm 2025.")}`}
+                          href={`https://wa.me/918919419327?text=${encodeURIComponent("Hello Aditya, I need help regarding Rhythm 2025.")}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >

@@ -11,25 +11,25 @@ interface ScheduleItem {
 
 export default function Schedule() {
   const day1: ScheduleItem[] = [
-    { no: 1, event: "Music", location: "JNMC Main Stage" },
-    { no: 2, event: "Dance", location: "JNMC Main Stage" },
-    { no: 3, event: "Photography", location: "C2" },
-    { no: 4, event: "Mr & Miss", location: "1, 5, 6" },
-    { no: 5, event: "Arts", location: "9" },
-    { no: 6, event: "Quiz", location: "8" },
-    { no: 7, event: "Debate", location: "10" },
-    { no: 8, event: "Gaming", location: "LAB 4" },
-    { no: 9, event: "Surprise Round", location: "C3, 7" },
-    { no: 10, event: "Treasure Hunt", location: "11, 12, 13" },
+    { no: 1, event: "Music", location: "JNMC Auditorium" },
+    { no: 2, event: "Dance", location: "JNMC Auditorium" },
+    { no: 3, event: "Photography", location: "College" },
+    { no: 4, event: "Mr & Miss", location: "College" },
+    { no: 5, event: "Arts", location: "College" },
+    { no: 6, event: "Quiz", location: "College" },
+    { no: 7, event: "Debate", location: "College" },
+    { no: 8, event: "Gaming", location: "College" },
+    { no: 9, event: "Surprise Event", location: "College" },
+    { no: 10, event: "Treasure Hunt", location: "College" },
   ];
 
   const day2: ScheduleItem[] = [
-    { no: 1, event: "Fashion Show", location: "JNMC Main Stage" },
-    { no: 2, event: "Mr & Miss (Final)", location: "JNMC" },
-    { no: 3, event: "Street Play", location: "JNMC" },
-    { no: 4, event: "Gaming", location: "College (Morning), JNMC (Final)" },
+    { no: 1, event: "Fashion Show", location: "JNMC Auditorium" },
+    { no: 2, event: "Mr & Miss (Final)", location: "JNMC Auditorium" },
+    { no: 3, event: "Street Play", location: "JNMC Auditorium" },
+    { no: 4, event: "Gaming", location: "College" },
     { no: 5, event: "Photography", location: "College" },
-    { no: 6, event: "Surprise Round", location: "College" },
+    { no: 6, event: "Surprise Event", location: "College" },
     { no: 7, event: "Treasure Hunt", location: "College" },
   ];
 
@@ -60,7 +60,7 @@ export default function Schedule() {
   return (
     <>
       <SEO 
-        title="Schedule — Rythm 2025" 
+        title="Schedule — Rhythm 2025" 
         description="Two-day festival schedule at R.L. Science Institute (BCA), Belagavi • Dance, music, debate, arts & more"
         path="/schedule"
       />

@@ -57,8 +57,8 @@ export default function Register() {
   return (
     <>
       <SEO 
-        title="Register — Rythm 2025" 
-        description="Register for Rythm 2025 inter PUC fest. Compete in dance, music, arts, debate, and more"
+        title="Register — Rhythm 2025" 
+        description="Register for Rhythm 2025 inter PUC fest. Compete in dance, music, arts, debate, and more"
         path="/register"
       />
 
@@ -72,7 +72,7 @@ export default function Register() {
               className="text-center max-w-3xl mx-auto space-y-4"
             >
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary">
-                Register for Rythm 2025
+                Register for Rhythm 2025
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground">
                 Join us in this celebration of talent, tradition, and purpose. Fill out the form below to secure your spot.
@@ -98,7 +98,7 @@ export default function Register() {
                       Registration Successful!
                     </h2>
                     <p className="text-muted-foreground text-lg">
-                      Thank you for registering for Rythm 2025. 
+                      Thank you for registering for Rhythm 2025. 
                       You'll receive a confirmation email with your registration details and a PDF acknowledgement shortly.
                     </p>
                     <div className="pt-6">

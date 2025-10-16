@@ -42,7 +42,7 @@ export default function EventDetail() {
   return (
     <>
       <SEO 
-        title={`${event.title} — Rythm 2025`}
+        title={`${event.title} — Rhythm 2025`} 
         description={event.subtitle}
         path={`/events/${event.slug}`}
       />
