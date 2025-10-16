@@ -56,7 +56,7 @@ export const eventsData: EventData[] = [
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header",
     technicalRequirements: ["MP3 track", "USB backup"],
     timeLimit: "3–5 minutes (+1 min instrument setup)",
-    rules: `\n## 🎤 **SOLO SINGING**\n\n### **ROUNDS**\n\n**Round 1 – Random of Your Choice**\n\n> Sing any song of your choice. Show your style and vocal range!\n\n**Round 2 – Mashup Round**\n\n> Create a mashup including the **given artist (from chits)** and **selected languages**. Be creative and blend smoothly!\n\n**Round 3 – Face Off**\n\n> The top finalists go head-to-head in a musical face-off. Bring your best energy and stage presence!\n\n### **RULES & REGULATIONS**\n\n* **Time Limit:** 3–5 minutes\n* **Instrument Setup Time:** Additional 1 minute if using instruments\n* **Languages:** English, Hindi, Kannada\n* **Reporting Time:** Be present **15 minutes before** the event starts\n* **Conduct:** Use of inappropriate or abusive language will lead to disqualification\n* **Instruments:** Inform the in-charge beforehand about any instruments you are bringing\n* **Karaoke:** Allowed\n* **Judging:** Judges' decision will be **final and binding**\n`
+    rules: `\n## 🎤 **SOLO SINGING**\n\n### **ROUNDS**\n\n**Round 1 – Random of Your Choice**\n\n> Sing any song of your choice. Show your style and vocal range!\n\n**Round 2 – Mashup Round**\n\n> Create a mashup including the **given artist (from chits)** and **selected languages**. Be creative and blend smoothly!\n\n**Round 3 – Face Off**\n\n> The top finalists go head-to-head in a musical face-off. Bring your best energy and stage presence!\n\n### **RULES & REGULATIONS**\n\n* **Time Limit:** 3–5 minutes\n* **Instrument Setup Time:** Additional 1 minute if using instruments\n* **Languages:** English, Hindi, Kannada\n* **Reporting Time:** Be present **15 minutes before** the event starts\n* **Conduct:** Use of inappropriate or abusive language will lead to disqualification\n* **Instruments:** Inform the in-charge beforehand about any instruments you are bringing\n* **Karaoke:** Allowed\n* **Judging:** Judges' decision will be **final and binding**\n\n### Note\n- Karaoke is allowed.\n`
   },
   {
     id: "group-singing",
@@ -68,9 +68,9 @@ export const eventsData: EventData[] = [
     image: "group singing",
     coordinators: [{ name: "Joey", phone: "7406165866" }],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header",
-    technicalRequirements: ["Instrument list in advance", "Backing track on USB if needed"],
+    technicalRequirements: ["Instrument list in advance"],
     timeLimit: "3–5 minutes (+2 min setup)",
-    rules: `\n## 🎵 **GROUP SINGING**\n\n### **ROUNDS**\n\n**Round 1 – Power Jam (of Your Choice)**\n\n> Perform a powerful group number that showcases your team's harmony and coordination.\n\n**Round 2 – Battle of Bands**\n\n> Groups compete head-to-head in an electrifying musical showdown. Creativity, teamwork, and energy will win the stage!\n\n### **RULES & REGULATIONS**\n\n* **Group Size:** Minimum 4 – Maximum 8 members\n* **Time Limit:** 3–5 minutes (+2 minutes for setup)\n* **Languages:** English, Hindi, Kannada\n* **Reporting Time:** Be present **15 minutes before** the event starts\n* **Conduct:** Use of inappropriate or abusive language will lead to disqualification\n* **Instruments:** Inform the in-charge beforehand; groups must bring their own instruments\n* **Karaoke:** Not allowed\n* **Judging:** Judges' decision will be **final and binding**\n`
+    rules: `\n## 🎵 **GROUP SINGING**\n\n### **ROUNDS**\n\n**Round 1 – Power Jam (of Your Choice)**\n\n> Perform a powerful group number that showcases your team's harmony and coordination.\n\n**Round 2 – Battle of Bands**\n\n> Groups compete head-to-head in an electrifying musical showdown. Creativity, teamwork, and energy will win the stage!\n\n### **RULES & REGULATIONS**\n\n* **Group Size:** Minimum 4 – Maximum 8 members\n* **Time Limit:** 3–5 minutes (+2 minutes for setup)\n* **Languages:** English, Hindi, Kannada\n* **Reporting Time:** Be present **15 minutes before** the event starts\n* **Instruments:** Minimum **two instruments** required; inform the in-charge beforehand. Groups must bring their own instruments\n* **Conduct:** Use of inappropriate or abusive language will lead to disqualification\n* **Karaoke:** Not allowed\n* **Judging:** Judges' decision will be **final and binding**\n`
   },
   {
     id: "debate",
@@ -82,11 +82,11 @@ export const eventsData: EventData[] = [
     image: "debate",
     coordinators: [{ name: "BakirKhan", phone: "7618782715" }],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header",
-    rules: `\n## 🗣️ **DEBATE RULES & REGULATIONS** 🗣️\n\n### **Team Formation:**\n* **Team Size:** 2 members only (1 speaker + 1 researcher)\n* **Registration:** Teams must be registered before the event starts\n* **Team Name:** Each team must choose a unique team name\n\n### **Format:**\n* **Style:** Parliamentary debate format\n* **Time Limit:** 5 minutes for constructive speech, 3 minutes for rebuttal\n* **Topics:** Current affairs, social issues, and general knowledge topics\n* **Language:** English, Hindi, or Kannada\n\n### **General Rules:**\n* Research and preparation time will be provided\n* No use of electronic devices during the debate\n* Respectful discourse is mandatory\n* No personal attacks or offensive language\n* Stick to the topic and provide logical arguments\n* Judges' decision will be final and binding\n\n### **Evaluation Criteria:**\n* Content and argument quality\n* Delivery and presentation skills\n* Rebuttal and counter-arguments\n* Time management\n* Respect for opponents\n`
+    rules: `\n## 🗣️ **DEBATE RULES & REGULATIONS** 🗣️\n\n### **Team Formation:**\n* **Team Size:** 2 members only (1 speaker + 1 researcher)\n* **Registration:** Teams must be registered before the event starts\n* **Team Name:** Each team must choose a unique team name\n\n### **Format:**\n* **Style:** Parliamentary debate format\n* **Time Limit:** 5 minutes for constructive speech, 3 minutes for rebuttal\n* **Topics:** Current affairs, social issues, and general knowledge topics\n* **Language:** **English only**\n\n### **General Rules:**\n* Research and preparation time will be provided\n* No use of electronic devices during the debate\n* Respectful discourse is mandatory\n* No personal attacks or offensive language\n* Stick to the topic and provide logical arguments\n* Judges' decision will be final and binding\n\n### **Evaluation Criteria:**\n* Content and argument quality\n* Delivery and presentation skills\n* Rebuttal and counter-arguments\n* Time management\n* Respect for opponents\n`
   },
   {
     id: "arts",
-    title: "Kala Pradarshan",
+    title: "Karmachitra",
     slug: "kala-pradarshan",
     subtitle: "Arts",
     category: "Solo",
@@ -98,7 +98,7 @@ export const eventsData: EventData[] = [
   },
   {
     id: "photography",
-    title: "Chitrakala",
+    title: "Chitraloka",
     slug: "chitraloka",
     subtitle: "Photography and Videography",
     category: "Team",
@@ -118,7 +118,6 @@ export const eventsData: EventData[] = [
     image: "mr and miss",
     coordinators: [{ name: "R K Aditya", phone: "8919419327" }],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header",
-    technicalRequirements: [],
     rules: `\n## 👑 **MR & MISS — RULES & REGULATIONS** 👑\n\n### I. General Rules\n- **Mobile Phone Usage:** The use of mobile phones is strictly prohibited during the event.\n- **Language Policy:** The use of vulgar or offensive language is not permitted anywhere in the campus.\n- **Accommodation:** Participants are responsible for managing their own accommodation.\n\n### II. Event Specifics\n- **Personal Items:** Participants are encouraged to carry a book, pen, and a comfortable pair of shoes (optional).\n- **Meals/Snacks:** Kindly carry your lunch box or snacks, as there will be multiple rounds throughout the day.\n- **Dress Code (Day 2):** On Day 2, participants are requested to come in **formal attire** (preferably).\n\n### III. Judging & Conduct\n- **Conflict Resolution:** Any arguments with faculty members or volunteers will not be tolerated.\n- **Rule Violations:** Violating any rules will lead to disqualification.\n- **Final Decision:** The decisions made by the judges will be **final and binding**.\n`
   },
   {
@@ -193,12 +192,19 @@ export const eventsData: EventData[] = [
     slug: "rupotsavah",
     subtitle: "Fashion Show",
     category: "Team",
-    teamSize: "8-12 models + 1 stylist",
+      teamSize: "7–11 members (incl. showstopper)",
     image: "fashion show",
-    coordinators: [{ name: "R K Aditya", phone: "8919419327" }],
+    coordinators: [{ name: "R K Adithya", phone: "8919419327" }],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header",
-    technicalRequirements: ["Music track (USB)", "Outfit change backstage", "Lighting brief"],
-    rules: `\n## 👗 **FASHION SHOW RULES & REGULATIONS** 👗\n\n### **Team Formation:**\n* **Team Size:** 8-12 models + 1 stylist\n* **Registration:** Teams must be registered before the event starts\n* **Team Name:** Each team must choose a unique team name\n\n### **Rounds:**\n* **Round 1:** Theme Walk (30 seconds per model)\n* **Round 2:** Outfit Change & Final Walk (1 minute per model)\n* **Round 3:** Group Formation & Finale\n\n### **Requirements:**\n* **Music:** Bring music track on USB (2-3 minutes duration)\n* **Outfits:** Two outfit changes required\n* **Stylist:** One stylist per team to assist with changes\n* **Backstage:** Outfit change area will be provided\n\n### **General Rules:**\n* Professional and respectful behavior expected\n* No offensive or inappropriate outfits or content\n* Respect fellow participants and organizers\n* Follow runway guidelines and timing\n* No smoking or alcohol backstage\n* Judges' decision will be final and binding\n\n### **Technical Requirements:**\n* Music track in MP3 format on USB\n* Outfit change facilities backstage\n* Lighting requirements to be discussed beforehand\n* Hair and makeup to be done by teams\n\n### **Evaluation Criteria:**\n* Style and presentation\n* Coordination and synchronization\n* Creativity and theme adherence\n* Confidence and stage presence\n* Overall team performance\n`
+      timeLimit: "6+1 minutes (+2 min setup/clearance)",
+      technicalRequirements: [
+        "Submit MP3 music track 2 days prior",
+        "Carry USB backup of music",
+        "Props must be safe; remove after performance",
+        "Changing rooms provided; maintain cleanliness",
+        "Share lighting brief in advance if needed"
+      ],
+      rules: `\n## 👗 **Fashion Show – “Rupotsavah (रूपोत्सवः)”**\n\n**Theme:** “Karma–Dharma” — harmony between one’s actions and righteousness.\n\n### **General Guidelines**\n1. Each team must consist of **7–11 members** (one will be the **showstopper**).\n2. The central theme is **“Karma–Dharma”** and must be reflected in costumes, expressions, and performance.\n3. Teams must creatively express the theme through **costumes, expressions, choreography, and a short act**.\n4. **Reporting Time:** All participants must report **at least 1 hour before** the event for registration, music submission, and stage briefing.\n5. **Late entries will not be permitted** once the event starts.\n\n### **Performance Rules**\n1. Each team will have a total of **6 + 1 minutes** to perform.\n2. Teams must perform a **short act (≥ 1 minute)** during the ramp walk to enhance storytelling and theme expression.\n3. Teams must submit their **music track (MP3 format)** to the organizers **at least 2 days** before the event.\n4. **Vulgarity, indecent gestures, or offensive music** will lead to immediate disqualification.\n5. **Props are allowed** but must be safe and must be removed immediately after the performance.\n6. The walk, choreography, and act must **clearly reflect the “Karma–Dharma”** theme.\n7. An additional **2 minutes** will be provided to each team for **stage setup and clearance**.\n\n### **Costume and Theme Presentation**\n1. Costumes should be **appropriate, elegant, and meaningful**, representing the values of **Karma (action)** and **Dharma (duty/righteousness)**.\n2. Participants are encouraged to use **creative, handmade materials**.\n3. All outfits and performances must **maintain cultural and moral decency**.\n4. **Changing rooms** will be provided — maintain discipline and cleanliness backstage.\n\n### **Judging Criteria**\n- **Interpretation of the theme — “Karma–Dharma”**\n- **Creativity and originality of costumes**\n- **Stage presence and confidence**\n- **Choreography, coordination, and synchronization**\n- **Inclusion and execution of a 1-minute act related to the theme**\n- **Overall impact and presentation**\n\n### **Disqualification Criteria**\n- Exceeding the **time limit**\n- Use of **inappropriate language, music, or gestures**\n- **Indiscipline or misbehavior** on or off stage\n- **Not following the given theme** or event guidelines\n\n### **Final Decision**\n- The **judges’ decision** will be final and binding.\n- The **organizing committee** reserves the right to modify the rules if required.\n\n✨ **Fashion Show Name:** Rupotsavah (रूपोत्सवः) — A Celebration of Grace, Style, and Tradition.\n`
   },
   
 ];

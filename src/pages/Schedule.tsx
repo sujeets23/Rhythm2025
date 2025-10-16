@@ -13,24 +13,24 @@ export default function Schedule() {
   const day1: ScheduleItem[] = [
     { no: 1, event: "Music", location: "JNMC Auditorium" },
     { no: 2, event: "Dance", location: "JNMC Auditorium" },
-    { no: 3, event: "Photography", location: "College" },
-    { no: 4, event: "Mr & Miss", location: "College" },
-    { no: 5, event: "Arts", location: "College" },
-    { no: 6, event: "Quiz", location: "College" },
-    { no: 7, event: "Debate", location: "College" },
-    { no: 8, event: "Gaming", location: "College" },
-    { no: 9, event: "Surprise Event", location: "College" },
-    { no: 10, event: "Treasure Hunt", location: "College" },
+    { no: 3, event: "Photography", location: "RLS BCA College Campus" },
+    { no: 4, event: "Mr & Miss", location: "RLS BCA College Campus" },
+    { no: 5, event: "Karmachitra", location: "RLS BCA College Campus" },
+    { no: 6, event: "Quiz", location: "RLS BCA College Campus" },
+    { no: 7, event: "Debate", location: "RLS BCA College Campus" },
+    { no: 8, event: "Gaming", location: "RLS BCA College Campus" },
+    { no: 9, event: "Surprise Event", location: "RLS BCA College Campus" },
+    { no: 10, event: "Treasure Hunt", location: "RLS BCA College Campus" },
   ];
 
   const day2: ScheduleItem[] = [
     { no: 1, event: "Fashion Show", location: "JNMC Auditorium" },
     { no: 2, event: "Mr & Miss (Final)", location: "JNMC Auditorium" },
     { no: 3, event: "Street Play", location: "JNMC Auditorium" },
-    { no: 4, event: "Gaming", location: "College" },
-    { no: 5, event: "Photography", location: "College" },
-    { no: 6, event: "Surprise Event", location: "College" },
-    { no: 7, event: "Treasure Hunt", location: "College" },
+    { no: 4, event: "Gaming", location: "RLS BCA College Campus" },
+    { no: 5, event: "Photography", location: "RLS BCA College Campus" },
+    { no: 6, event: "Surprise Event", location: "RLS BCA College Campus" },
+    { no: 7, event: "Treasure Hunt", location: "RLS BCA College Campus" },
   ];
 
   const TimelineItem = ({ item, index }: { item: ScheduleItem; index: number }) => (
