@@ -7,7 +7,7 @@ import { SEO } from "@/components/SEO";
 import { EventCard } from "@/components/EventCard";
 import { eventsData } from "@/lib/eventsData";
 import heroBg from "@/assets/hero-dharma-bg.png";
-import rhythmLogo from "@/assets/rhythm-logo.png";
+import heroVideo from "@/assets/Rhythm logo reveal anima.mp4";
 
 export default function Home() {
   const floatingParticles = Array.from({ length: 8 }, (_, i) => i);
@@ -22,17 +22,16 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background with parallax */}
-        <motion.div 
-          className="absolute inset-0 z-0"
-          style={{ 
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+        {/* Background video with fallback poster */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          src={heroVideo}
+          poster={heroBg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
         />
 
         {/* Floating particles */}
@@ -58,21 +57,13 @@ export default function Home() {
         ))}
 
         {/* Hero Content */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center pt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 max-w-4xl mx-auto"
           >
-            <motion.img 
-              src={rhythmLogo} 
-              alt="Rhythm 2k25 golden script logo" 
-              className="w-64 md:w-96 lg:w-[28rem] mx-auto drop-shadow-2xl"
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-            />
 
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -85,7 +76,7 @@ export default function Home() {
               <span className="text-white font-serif text-lg md:text-xl">॥</span>
             </motion.div>
             
-            <p className="font-serif text-2xl md:text-3xl text-accent drop-shadow-lg">
+            <p className="font-serif text-2xl md:text-3xl text-white drop-shadow-lg">
               Kurukshetra
             </p>
 
