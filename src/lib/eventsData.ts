@@ -194,7 +194,7 @@ export const eventsData: EventData[] = [
     category: "Solo",
     teamSize: "Individual",
     image: "quiz",
-    coordinators: [{ name: "Quiz Incharge", phone: "0000000000" }],
+    coordinators: [{ name: "Arun", phone: "+91 84310 26141" }],
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSe4ecP2WI2Y7gRGi9e5_pK4LUkpIBPnDGrCRHW--a4gTelEzA/viewform?usp=header",
     rules: `\n## 🧠 Quiz: **Jnyana Dhara (ज्ञान धारा)** — Rules & Regulations\n\n### 📍 General Guidelines\n1. The competition is open to all students of the college.\n2. **Participation is individual** — no teams allowed.\n3. Each participant must register **in advance** before the event begins.\n4. Participants must carry their **college ID cards** for verification.\n\n### ⚙ Competition Format\nThe quiz will consist of **three rounds**:\n- **Round 1 — Preliminary Round**\n- **Round 2 — Semi-Final Round**\n- **Round 3 — Final Round**\n\n### ⏱ Rules During the Quiz\n1. Mobile phones, smartwatches, and electronic gadgets are **strictly prohibited**.\n2. Each question must be answered within the **given time limit**.\n3. **No negative marking** unless announced before the round.\n4. **No discussion** or assistance from the audience.\n5. The **quizmaster’s decision is final** and binding in all cases.\n\n### 🏆 Judging\n- Judge’s/Quiz Master’s decision is **final**.\n`
   },
