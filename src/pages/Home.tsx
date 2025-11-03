@@ -77,7 +77,8 @@ export default function Home() {
             </motion.div>
             
             <p className="font-serif text-2xl md:text-3xl text-white drop-shadow-lg">
-              Kurukshetra
+              Karma | Dharma
+              (Open Theme)
             </p>
 
             <p className="text-lg md:text-xl text-background/90 max-w-2xl mx-auto">
